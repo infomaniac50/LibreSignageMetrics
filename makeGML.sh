@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-python makeDOT.py dist/ 1 libresignageIncludes.dot
-gv2gml -o libresignageIncludes.gml libresignageIncludes.dot
-sed -i -e 's/name/label/' libresignageIncludes.gml
+python makeDOT.py dist/ 1 builds/includes.dot
+gv2gml -o builds/includes.gml builds/includes.dot
+sed -i -e 's/name/label/' builds/includes.gml

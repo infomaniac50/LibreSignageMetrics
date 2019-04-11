@@ -56,13 +56,15 @@ for phpFile in PHP_list:
                 matchFile = m.group(3)[0:-1]
                 if matchFile[-4::] == ".php": #only PHP files
                     phpFile = phpFile.replace("\\","/")
-                    phpFile = phpFile.replace('$_SERVER[DOCUMENT_ROOT]./', "")
-                    phpFile = phpFile.replace('./', "")
                     matchFile = matchFile.replace("\\","/")
+                    phpFile = phpFile.replace('LIBRESIGNAGE_ROOT./',"")
+                    phpFile = phpFile.replace('$_SERVER[DOCUMENT_ROOT]./../',"")
+                    phpFile = phpFile.replace('$_SERVER[DOCUMENT_ROOT]./',"public/")
                     matchFile = matchFile.replace("\"","")
                     matchFile = matchFile.replace('\'',"")
-                    matchFile = matchFile.replace('$_SERVER[DOCUMENT_ROOT]./', "")
-                    matchFile = matchFile.replace('./', "")
+                    matchFile = matchFile.replace('LIBRESIGNAGE_ROOT./',"")
+                    matchFile = matchFile.replace('$_SERVER[DOCUMENT_ROOT]./../',"")
+                    matchFile = matchFile.replace('$_SERVER[DOCUMENT_ROOT]./',"public/")
                     includeList.append([phpFile[len(myDir):], matchFile])
             else: pass
  
@@ -71,13 +73,15 @@ for phpFile in PHP_list:
                 matchFile = m.group(3)[0:-1]
                 if matchFile[-4::] == '.php': #only PHP files
                     phpFile = phpFile.replace("\\","/")
-                    phpFile = phpFile.replace('$_SERVER[DOCUMENT_ROOT]./', "")
-                    phpFile = phpFile.replace('./', "")
                     matchFile = matchFile.replace("\\","/")
+                    phpFile = phpFile.replace('LIBRESIGNAGE_ROOT./',"")
+                    phpFile = phpFile.replace('$_SERVER[DOCUMENT_ROOT]./../',"")
+                    phpFile = phpFile.replace('$_SERVER[DOCUMENT_ROOT]./',"public/")
                     matchFile = matchFile.replace("\"","")
                     matchFile = matchFile.replace('\'',"")
-                    matchFile = matchFile.replace('$_SERVER[DOCUMENT_ROOT]./', "")
-                    matchFile = matchFile.replace('./', "")
+                    matchFile = matchFile.replace('LIBRESIGNAGE_ROOT./',"")
+                    matchFile = matchFile.replace('$_SERVER[DOCUMENT_ROOT]./../',"")
+                    matchFile = matchFile.replace('$_SERVER[DOCUMENT_ROOT]./',"public/")
                     includeList.append([phpFile[len(myDir):], matchFile])
             else: pass
  
